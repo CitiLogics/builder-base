@@ -1,23 +1,24 @@
 FROM ubuntu:bionic
 
 RUN apt-get update && \
-        apt-get install -y libiodbc2 tdsodbc openssl libsqlite3-dev curl
-
-
-RUN apt-get update && \
-        apt-get install -y \
-        g++ \
-        unixodbc-dev \
-        make \
-        cmake \
-        zlib1g-dev \
-        zlib1g \
-        libcurl4-openssl-dev \
-        libssl-dev \
-        git \
-        llvm clang
-
-RUN apt-get install libiodbc2-dev -y
+    apt-get install -y \
+    libiodbc2-dev \
+    libiodbc2 \
+    iodbc \
+    tdsodbc \
+    openssl \
+    libsqlite3-dev \
+    curl \
+    g++ \
+    make \
+    cmake \
+    zlib1g-dev \
+    zlib1g \
+    libcurl4-openssl-dev \
+    libssl-dev \
+    git \
+    llvm \
+    clang
 
 WORKDIR /opt/src
 
